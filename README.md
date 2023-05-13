@@ -22,7 +22,7 @@ private:
         Node* next{};
         //TODO: constructors and methods
     };
-    Node* head{};
+    std::vector<Node*> head;
 };
 ```
 ### Functions
@@ -33,4 +33,41 @@ private:
 - `bool isConnected(T source, T destination, std::function<bool(T, T)> func) const`: Check if two vertices are connected(set default function to it).
 - `vector<T> findShortestPath(T source, T destination, std::function<bool(T, T)> func)`: Find the shortest path between two vertices(set default function to it).
 - `int getNumConnectedComponents() const`:Get the number of connected components in the graph.
-- 
+- `void bfs(int vertex, vector<bool>& visited) const`: implement Breadth-first search (BFS)
+- `vector<T> topologicalSort() const`: [_link_](https://en.wikipedia.org/wiki/Topological_sorting#:~:text=In%20computer%20science%2C%20a%20topological,before%20v%20in%20the%20ordering.)
+
+## part 2
+Implement a binary search tree that can store int data that can be compared using the less-than operator. The program should also be able to perform the following operations on the tree:
+
+- Insert a new node into the tree
+- Delete a node from the tree
+- Find a node in the tree
+- Print the contents of the tree in sorted order
+
+```cpp
+struct Node {
+    int value;
+    Node* left;
+    Node* right;
+
+    Node(int value) {
+        this->value = value;
+        left = nullptr;
+        right = nullptr;
+    }
+};
+
+Node* insert(Node* root, int value) {
+}
+
+void deleteNode(Node* root, int value) {
+}
+
+Node* find(Node* root, int value) {
+}
+
+void printInOrder(Node* root) {
+}
+```
+<br/>
+<p  align="center"> <b>GOOD LUCK</b> </p>
