@@ -28,17 +28,17 @@ private:
 ### Functions
 - ` void addVertex(const T& v)`: get T and add to graph.
 - `void addEdge(const T& v1, const T& v2, int a,  std::function<bool(T, T)> func)`: get two nodes and weight to add edge from v1 to v2. Use func to search in the graph and find(set default function to it).If edge exist, replace it with new weight.
-- `const int getNumEdges() const`: The number of edges in the graph.
-- `const vector<T>& getNeighbors(T vertex, std::function<bool(T, T)> func) const`: Get the list of neighbors of a vertex(set default function to it).
-- `bool isConnected(T source, T destination, std::function<bool(T, T)> func) const`: Check if two vertices are connected(set default function to it).
+- `int getNumEdges()`: The number of edges in the graph.
+- `vector<T>& getNeighbors(T vertex, std::function<bool(T, T)> func)`: Get the list of neighbors of a vertex(set default function to it).
+- `bool isConnected(T source, T destination, std::function<bool(T, T)> func)`: Check if two vertices are connected(set default function to it).
 - `vector<T> findShortestPath(T source, T destination, std::function<bool(T, T)> func)`: Find the shortest path between two vertices(set default function to it).
-- `int getNumConnectedComponents() const`:Get the number of connected components in the graph.
-- `void bfs(int vertex, vector<bool>& visited) const`: implement Breadth-first search (BFS)
-- `vector<T> topologicalSort() const`: [_link_](https://en.wikipedia.org/wiki/Topological_sorting#:~:text=In%20computer%20science%2C%20a%20topological,before%20v%20in%20the%20ordering.)
+- `int getNumConnectedComponents()`:Get the number of connected components in the graph.
+- `void bfs(int vertex, vector<bool>& visited)`: implement Breadth-first search (BFS)
+- `vector<T> topologicalSort()`: [_link_](https://en.wikipedia.org/wiki/Topological_sorting#:~:text=In%20computer%20science%2C%20a%20topological,before%20v%20in%20the%20ordering.)
 
 ## part 2
 Implement a binary search tree that can store int data that can be compared using the less-than operator. The program should also be able to perform the following operations on the tree:
-
+![](./resources/bin.jpeg)
 - Insert a new node into the tree
 - Delete a node from the tree
 - Find a node in the tree
